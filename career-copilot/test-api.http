@@ -1,0 +1,13 @@
+
+### 1. Create a user
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Rachit",
+  "email": "rachit.demo@example.com",
+  "skills": "Java, DSA, Spring Boot"
+}
+
+### 2. Get all users
+GET http://localhost:8080/api/users

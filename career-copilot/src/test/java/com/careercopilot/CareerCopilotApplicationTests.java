@@ -1,0 +1,13 @@
+package com.careercopilot;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CareerCopilotApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
