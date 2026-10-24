@@ -72,5 +72,42 @@ public class OllamaService {
 
         return answer.asText();
     }
-}
 
+    // Extract skills dynamically from the resume and job description
+    public String extractSkills(
+            String resumeText,
+            String jobDescription)
+            throws IOException, InterruptedException {
+
+        String prompt = """
+                Extract technical skills and requirements from the
+                resume and job description below.
+
+                Return ONLY valid JSON in this exact structure:
+                {
+                  "resumeSkills": ["skill names found in resume"],
+                  "requiredSkills": ["skills required by job description"]
+                }
+
+                Rules:
+                - Include only skills explicitly mentioned in each text.
+                - Do not assume one skill proves another skill.
+                - Preserve the original meaning of each skill.
+                - Do not add explanations outside the JSON.
+                - If no skills are found, return an empty array.
+
+                RESUME:
+                %s
+
+                JOB DESCRIPTION:
+                %s
+                """.formatted(
+                resumeText.substring(
+                        0, Math.min(resumeText.length(), 8000)),
+                jobDescription.substring(
+                        0, Math.min(jobDescription.length(), 5000))
+        );
+
+        return generateResponse(prompt);
+    }
+}
