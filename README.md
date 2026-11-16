@@ -71,11 +71,12 @@ JobFit AI follows a client-server architecture where the React frontend communic
 
 User → React Frontend → Spring Boot REST APIs → Resume Processing → RAG Retrieval → Llama 3.2 → AI Response → React Frontend
 
-##Project Structure
+## Project Structure
 
+```text
 JobFit-AI/
 │
-├── career-copilot/                         # Spring Boot Backend
+├── career-copilot/                 # Spring Boot Backend
 │   ├── .mvn/
 │   │   └── wrapper/
 │   ├── src/
@@ -117,23 +118,25 @@ JobFit-AI/
 │   ├── mvnw
 │   └── mvnw.cmd
 │
-└── frontend/                                # React + Vite Frontend
-├── src/
-│   ├── assets/
-│   │   ├── hero.png
-│   │   ├── react.svg
-│   │   └── vite.svg
-│   ├── App.css
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── package-lock.json
-├── README.md
-└── vite.config.js
+├── frontend/                       # React + Vite Frontend
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── hero.png
+│   │   │   ├── react.svg
+│   │   │   └── vite.svg
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
+│
+└── README.md
+```
 
 
 
